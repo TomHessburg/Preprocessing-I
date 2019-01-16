@@ -53,7 +53,103 @@ table {
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+
+
+// variables
+@padBottom: 20px;
+@accentColor: rgb(112, 92, 244);
+
+//classes
+
+.base-text-stylings(@fontsize,@textalign,@color) {
+	font-family: sans-serif;
+	font-size: @fontsize;
+	text-align: @textalign;
+	color: @color;
 }
 
+
+
+
+
+
+
+
+
+
+
+// design HTML Starts Here
+html, body {
+	height: 100%;
+}
+.containter {
+	max-width: 1100px;
+	margin: 0 auto;
+	background: rgb(201, 201, 201);
+
+	header {
+		color: black;
+	}
+}
+
+.top-nav{
+	padding: 20px;
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: flex-end;
+
+	a{
+		text-decoration: none;
+		color: rgb(0, 0, 0);
+		font-size: 20px;
+		margin: 0 10px;
+	}
+}
+
+
+.intro {
+	width: 85%;
+	background: white;
+	box-sizing: border-box;
+	padding: 20px;
+	margin: 0 auto;
+	text-align: center;
+
+	h1 {
+		.base-text-stylings(40px, center, black);
+		padding-bottom: @padBottom;
+	}
+	h2 {
+		.base-text-stylings(25px, center, black);
+		padding-bottom: @padBottom + 15;
+		border-bottom: 2px solid @accentColor;
+		margin-bottom: @padBottom;
+	}
+	p {
+		.base-text-stylings(18px, start, black);
+		padding-bottom: @padBottom + 15;
+	}
+	.button {
+		width: 40%;
+		text-align: center;
+		padding: 10px 40px;
+		border: 1px solid black;
+		border-radius: 5px;
+		color: white;
+		background: @accentColor;
+	}
+}
+
+.mainimage {
+	width: 20%;
+	height: auto;
+}
+
+.top {
+	display: ;
+}
+
+.top-nav a:hover {
+	color: @accentColor;
+}
