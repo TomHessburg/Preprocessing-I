@@ -133,7 +133,7 @@ table {
 html,
 body {
   height: 100%;
-  background: #dce1e4;
+  background: #91a8b6;
 }
 .containter {
   max-width: 1100px;
@@ -150,7 +150,7 @@ body {
   display: flex;
   justify-content: center;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-  background-color: #00bbff;
+  background-color: #225668;
 }
 .top-nav a {
   text-decoration: none;
@@ -193,7 +193,7 @@ body {
   text-align: center;
   color: black;
   padding-bottom: 35px;
-  border-bottom: 2px solid #00bbff;
+  border-bottom: 2px solid #225668;
   margin-bottom: 20px;
 }
 .intro .oneBottom {
@@ -207,7 +207,7 @@ body {
   }
 }
 .intro .oneBottom span {
-  color: #00bbff;
+  color: #225668;
 }
 .intro p {
   font-family: 'Roboto Mono', monospace;
@@ -228,7 +228,7 @@ body {
   padding: 10px 20px;
   border: 1px solid black;
   border-radius: 5px;
-  background: #00bbff;
+  background: #225668;
 }
 .intro .button a {
   color: white;
@@ -236,11 +236,11 @@ body {
 }
 .intro .button:hover {
   background: white;
-  border: 1px solid #00bbff;
+  border: 1px solid #225668;
   font-size: 20px;
 }
 .intro .button:hover a {
-  color: #00bbff;
+  color: #225668;
 }
 .skills {
   margin: 0 auto;
@@ -260,7 +260,7 @@ body {
   font-family: 'Roboto Mono', monospace;
   font-size: 60px;
   text-align: none;
-  color: #00bbff;
+  color: #225668;
 }
 .skills ul li {
   color: #5a6065;
@@ -295,7 +295,7 @@ body {
   font-size: 25px;
   text-align: none;
   color: white;
-  background: #00bbff;
+  background: #225668;
   box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.5);
   padding: 20px;
   width: 80%;
@@ -338,7 +338,7 @@ body {
   }
 }
 .contact .contactFlexOne {
-  color: #00bbff;
+  color: #225668;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -347,4 +347,9 @@ body {
 .contact .contactFlex {
   display: flex;
   justify-content: center;
+}
+.footer {
+  width: 100%;
+  height: 100px;
+  background: #545454;
 }
