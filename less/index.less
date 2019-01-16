@@ -62,7 +62,7 @@ table {
 //classes
 
 .base-text-stylings(@fontsize,@textalign,@color) {
-	font-family: sans-serif;
+	font-family: 'Roboto Mono', monospace;
 	font-size: @fontsize;
 	text-align: @textalign;
 	color: @color;
@@ -81,6 +81,7 @@ table {
 // design HTML Starts Here
 html, body {
 	height: 100%;
+	background: @accentColor;
 }
 .containter {
 	max-width: 1100px;
@@ -92,22 +93,30 @@ html, body {
 	}
 }
 
+
+//nav stylings
 .top-nav{
 	padding: 20px;
 	width: 90%;
 	margin: 0 auto;
 	display: flex;
-	justify-content: flex-end;
+	justify-content: center;
+	background: @accentColor;
+	box-shadow: 0 0 15px rgba(0,0,0, .5);
 
 	a{
 		text-decoration: none;
 		color: rgb(0, 0, 0);
-		font-size: 20px;
+		font-size: 30px;
 		margin: 0 10px;
 	}
 }
+.top-nav a:hover {
+	color: white;
+}
+// end nav stylings
 
-
+//intro stylings
 .intro {
 	width: 85%;
 	background: white;
@@ -115,9 +124,10 @@ html, body {
 	padding: 20px;
 	margin: 0 auto;
 	text-align: center;
+	box-shadow: 0 0 5px rgba(0,0,0, .2);
 
 	h1 {
-		.base-text-stylings(40px, center, black);
+		.base-text-stylings(50px, center, black);
 		padding-bottom: @padBottom;
 	}
 	h2 {
@@ -126,30 +136,102 @@ html, body {
 		border-bottom: 2px solid @accentColor;
 		margin-bottom: @padBottom;
 	}
+	.oneBottom {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+
+		span {
+			color: @accentColor;
+		}
+	}
+
 	p {
 		.base-text-stylings(18px, start, black);
 		padding-bottom: @padBottom + 15;
+		width: 50%;
 	}
 	.button {
-		width: 40%;
+		width: 30%;
 		text-align: center;
-		padding: 10px 40px;
+		padding: 10px 20px;
 		border: 1px solid black;
 		border-radius: 5px;
-		color: white;
 		background: @accentColor;
+		a{
+			color: white;
+			text-decoration: none;
+		}
+	}
+	.button:hover{
+		background: white;
+		border: 1px solid @accentColor;
+		font-size: 20px;
+		a {
+			color: @accentColor;
+		}
 	}
 }
 
-.mainimage {
-	width: 20%;
-	height: auto;
+//end intro stylings
+
+
+
+
+
+
+// skills section stylings
+
+.skills{
+	margin: 0 auto;
+	width: 80%;
+	background: white;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: @padBottom;
+
+	h2{
+		.base-text-stylings(60px,none,@accentColor)
+	}
+	ul{
+
+		li{
+			color: rgb(90, 96, 101);
+			font-size: 22px;
+			padding: 20px 0;
+		}
+	}
 }
 
-.top {
-	display: ;
+//end skills section stylings
+
+// work history stylings
+
+.work-history{
+	width: 95%;
+	margin: 0 auto;
+	background: @accentColor;
+	color: white;
+	padding: @padBottom;
+
+	h3{
+		.base-text-stylings(60px,center,black);
+		width: 40%;
+		margin: 20px 0;
+	}
+	h4{
+		.base-text-stylings(40px,center,white);
+		margin: 10px 0;
+	}
+	p{
+		.base-text-stylings(30px,none,white);
+		background: white;
+		color: @accentColor;
+	}
+
 }
 
-.top-nav a:hover {
-	color: @accentColor;
-}
+
+
+//end work history stylings

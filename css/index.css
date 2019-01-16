@@ -133,6 +133,7 @@ table {
 html,
 body {
   height: 100%;
+  background: #705cf4;
 }
 .containter {
   max-width: 1100px;
@@ -147,13 +148,18 @@ body {
   width: 90%;
   margin: 0 auto;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  background: #705cf4;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 .top-nav a {
   text-decoration: none;
   color: #000000;
-  font-size: 20px;
+  font-size: 30px;
   margin: 0 10px;
+}
+.top-nav a:hover {
+  color: white;
 }
 .intro {
   width: 85%;
@@ -162,16 +168,17 @@ body {
   padding: 20px;
   margin: 0 auto;
   text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 .intro h1 {
-  font-family: sans-serif;
-  font-size: 40px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 50px;
   text-align: center;
   color: black;
   padding-bottom: 20px;
 }
 .intro h2 {
-  font-family: sans-serif;
+  font-family: 'Roboto Mono', monospace;
   font-size: 25px;
   text-align: center;
   color: black;
@@ -179,29 +186,89 @@ body {
   border-bottom: 2px solid #705cf4;
   margin-bottom: 20px;
 }
+.intro .oneBottom {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.intro .oneBottom span {
+  color: #705cf4;
+}
 .intro p {
-  font-family: sans-serif;
+  font-family: 'Roboto Mono', monospace;
   font-size: 18px;
   text-align: start;
   color: black;
   padding-bottom: 35px;
+  width: 50%;
 }
 .intro .button {
-  width: 40%;
+  width: 30%;
   text-align: center;
-  padding: 10px 40px;
+  padding: 10px 20px;
   border: 1px solid black;
   border-radius: 5px;
-  color: white;
   background: #705cf4;
 }
-.mainimage {
-  width: 20%;
-  height: auto;
+.intro .button a {
+  color: white;
+  text-decoration: none;
 }
-.top {
-  display: ;
+.intro .button:hover {
+  background: white;
+  border: 1px solid #705cf4;
+  font-size: 20px;
 }
-.top-nav a:hover {
+.intro .button:hover a {
+  color: #705cf4;
+}
+.skills {
+  margin: 0 auto;
+  width: 80%;
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+.skills h2 {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 60px;
+  text-align: none;
+  color: #705cf4;
+}
+.skills ul li {
+  color: #5a6065;
+  font-size: 22px;
+  padding: 20px 0;
+}
+.work-history {
+  width: 95%;
+  margin: 0 auto;
+  background: #705cf4;
+  color: white;
+  padding: 20px;
+}
+.work-history h3 {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 60px;
+  text-align: center;
+  color: black;
+  width: 40%;
+  margin: 20px 0;
+}
+.work-history h4 {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 40px;
+  text-align: center;
+  color: white;
+  margin: 10px 0;
+}
+.work-history p {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 30px;
+  text-align: none;
+  color: white;
+  background: white;
   color: #705cf4;
 }
