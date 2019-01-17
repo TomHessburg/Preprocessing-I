@@ -53,7 +53,330 @@ table {
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+
+
+
+
+
+
+// variables
+@padBottom: 20px;
+@accentColor: rgb(34, 86, 104);
+
+//classes
+
+.base-text-stylings(@fontsize,@textalign,@color) {
+	font-family: 'Roboto Mono', monospace;
+	font-size: @fontsize;
+	text-align: @textalign;
+	color: @color;
 }
 
+.depth-adder (@bgcolor) {
+	box-shadow: 0 0 15px rgba(0,0,0, .5);
+	background-color: @bgcolor ;
+}
+
+
+
+
+
+
+
+
+
+
+
+// design HTML Starts Here
+html, body {
+	height: 100%;
+	background: rgb(145, 168, 182); 
+}
+.containter {
+	max-width: 1100px;
+	margin: 0 auto;
+	background: rgb(201, 201, 201);
+
+	header {
+		color: black;
+	}
+}
+
+
+
+
+
+
+
+//nav stylings
+.top-nav{
+	padding: 20px;
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	.depth-adder(@accentColor);
+
+	a{
+		text-decoration: none;
+		.base-text-stylings(25px,none,white);
+		margin: 0 10px;
+	}
+
+
+	@media (max-width: 500px){
+		flex-direction: column;
+		align-items: center;
+		a{
+			font-size: 20px;
+		}
+	}
+}
+
+
+
+
+
+.top-nav a:hover {
+	color: rgb(0, 0, 0);
+}
+// end nav stylings
+
+
+
+
+
+
+
+
+
+
+
+
+
+//intro stylings
+.intro {
+	width: 85%;
+	background: white;
+	box-sizing: border-box;
+	padding: 20px;
+	margin: 0 auto;
+	text-align: center;
+
+
+	h1 {
+		.base-text-stylings(50px, center, black);
+		padding-bottom: @padBottom;
+	}
+	h2 {
+		.base-text-stylings(25px, center, black);
+		padding-bottom: @padBottom + 15;
+		border-bottom: 2px solid @accentColor;
+		margin-bottom: @padBottom;
+	}
+	.oneBottom {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+
+		@media (max-width: 500px){
+			flex-direction: column;
+		}
+
+		span {
+			color: @accentColor;
+		}
+	}
+
+
+	p {
+		.base-text-stylings(18px, start, black);
+		padding-bottom: @padBottom + 15;
+		width: 50%;
+
+		@media (max-width: 500px){
+			width: 90%;
+		}
+	}
+
+
+	.button {
+		width: 30%;
+		text-align: center;
+		padding: 10px 20px;
+		border: 1px solid black;
+		border-radius: 5px;
+		background: @accentColor;
+		a{
+			color: white;
+			text-decoration: none;
+		}
+	}
+	.button:hover{
+		background: white;
+		border: 1px solid @accentColor;
+		font-size: 20px;
+		a {
+			color: @accentColor;
+		}
+	}
+}
+
+//end intro stylings
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// skills section stylings
+
+.skills{
+	margin: 0 auto;
+	width: 80%;
+	background: white;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: @padBottom;
+
+	@media (max-width: 500px){
+		flex-direction: column;
+	}
+
+	h2{
+		.base-text-stylings(60px,none,@accentColor)
+	}
+	ul{
+
+		li{
+			color: rgb(90, 96, 101);
+			font-size: 22px;
+			padding: 20px 0;
+		}
+	}
+}
+
+//end skills section stylings
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// work history stylings
+
+.work-history{
+	width: 95%;
+	margin: 0 auto;
+	color: white;
+	padding: @padBottom;
+	.depth-adder(rgb(82, 82, 82));
+	
+
+	h3{
+		.base-text-stylings(60px,center,rgb(222, 222, 222));
+		width: 40%;
+		margin: 20px 0;
+	}
+	h4{
+		.base-text-stylings(40px,center,rgb(243, 242, 255));
+		margin: 10px 0;
+	}
+	p{
+		.base-text-stylings(25px,none,white);
+		background: @accentColor;
+		box-shadow: inset 0 0 25px rgba(0,0,0, .5);
+		padding: @padBottom;
+		width: 80%;
+		margin: 0 auto;
+		line-height: 1.4;
+	}
+}
+
+//end work history stylings
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//contact starts here
+
+.contact {
+	width: 90%;
+	margin: 0 auto;
+	background: white;
+	color: black;
+
+	h3{
+		.base-text-stylings(40px,center,black);
+	}
+
+	li{
+		.base-text-stylings(20px,none, none);
+		padding: 20px 0;
+		@media (max-width: 700px){
+			.base-text-stylings(17px,none, none);
+		}
+		@media (max-width: 500px){
+			.base-text-stylings(12px,none, none);
+		}
+	}
+
+		
+	.contactFlexOne{
+		color: @accentColor;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		margin-right: 10px;
+	}
+
+	.contactFlex {
+		display: flex;
+		justify-content: center;
+	}
+}
+
+
+//end contact
+
+.footer {
+	width: 100%;
+	height: 100px;
+	background: rgb(84, 84, 84);
+}
